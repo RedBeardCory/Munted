@@ -19,7 +19,7 @@ function main(){
 
 
 function blocks (){
-    
+    //halal
     //pick a random colour
     var a = Math.floor((Math.random() * 256) + 1);
     var b = Math.floor((Math.random() * 256) + 1);
