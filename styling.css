@@ -1,4 +1,8 @@
 /* style of the page */
-canvas {
-    border-color: aquamarine;
+html {
+    background-color: aquamarine;
+}
+
+h1 {
+    color: orange;
 }
