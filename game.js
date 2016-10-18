@@ -1,6 +1,6 @@
 //this is the game.js file
 
-
+//richard
 function main(){
     
     //select the canvas
