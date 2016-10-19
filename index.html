@@ -13,10 +13,16 @@
         <!-- import jquery for later use -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" ></script>
     </head>
-    <body onload="main();">
-        <!-- making some changes -->
-        <h1>its working</h1>
-        <h2>Richard check this out</h2>
-        <canvas id="game" width="400" height="400"></canvas>
+    <body onload="initCanvas();">
+        
+        <h1>Munted </h1>
+        <h2>A HTML5 Canvas Experiment</h2>
+        <div class="canvasy">
+            <canvas id="game" width="400" height="400"></canvas>
+        </div>
+        
+        <!-- make a button to do different things i guess -->
+        <button type="button" onclick="main();" >Start</button>
+        
     </body>
 </html>
