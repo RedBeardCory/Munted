@@ -1,6 +1,7 @@
 //this is the game.js file
 
 function initCanvas() {
+
     //select the canvas
     //this is global so everything can see it
     c = document.getElementById("game").getContext("2d");
