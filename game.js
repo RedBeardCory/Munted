@@ -12,11 +12,11 @@ function initCanvas() {
     //fillRect(start x, start y, size width, size height)
     //this one just makes the background black
     c.fillRect(0, 0, 400, 400);
+    
+    o = document.getElementById('overlay').getContext("2d");
 }
 
 function main(){
-    
-    
     
     //creates a new block on a random position between 1 and 400px every 10 ms
     //setInterval(blocks, 10);
@@ -27,6 +27,8 @@ function main(){
     
     //call the draw function on the ball
     //ballObject.draw(100, 100);
+    overlay.clearOverlay();
+    overlay.test();
     
     //vars to control the animation below
     var xV = ballObject.speed;
@@ -67,7 +69,7 @@ function main(){
         }
         
         //now check to see if the ball hits the sides
-        if(ballObject.posX <=0 || ballObject.posX >= 400){
+        if(ballObject.posX <= 15 || ballObject.posX >= 385){
             //if so then reverse the x movement
             xV = xV * -1;
         }
@@ -79,7 +81,7 @@ function main(){
         c.fillRect(0, 0, 400, 400);
         
         //now we call the drawbounce function on the ball
-        //ballObject.drawBounce();
+        ballObject.drawBounce();
         
         for(i = 0; i < particleCount; i++){
             particles[i].draw();

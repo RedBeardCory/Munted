@@ -30,7 +30,7 @@ function Ball(colour) {
         c.beginPath();
         
         //this is the line that is drawn invisibly
-        c.arc(this.posX, this.posY, 20, 0, Math.PI* 2, false);
+        c.arc(this.posX, this.posY, 15, 0, Math.PI* 2, false);
         
         //then specify the colour of the fill
         c.fillStyle = this.colour;

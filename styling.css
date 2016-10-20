@@ -26,6 +26,7 @@ h1 {
 }
 
 .canvasy canvas {
+    padding: auto;
     position: absolute;
     top: 0;
     left: 0;
