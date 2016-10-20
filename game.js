@@ -61,13 +61,13 @@ function main(){
         //the += just means increment by whatever follows
         
         //check to see if the ball hits the roof or the floor
-        if(ballObject.posY <= 0 || ballObject.posY >= 400){
+        if(ballObject.posY <= 12 || ballObject.posY >= 338){
             //we will want to reverse the direction of movement in the y axis
             yV = yV * -1;
         }
         
         //now check to see if the ball hits the sides
-        if(ballObject.posX <=0 || ballObject.posX >= 400){
+        if(ballObject.posX <=12 || ballObject.posX >= 338){
             //if so then reverse the x movement
             xV = xV * -1;
         }
