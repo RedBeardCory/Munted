@@ -10,4 +10,5 @@ function Platform(colour) {
     //fillRect(start x, start y, size width, size height)
     c.fillRect(20, 300, this.width, this.height);
     
+    //This is Just here so i can Commit this stupid stuff
 }
