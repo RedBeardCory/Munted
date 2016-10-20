@@ -26,7 +26,7 @@ function main(){
     var ballObject = new Ball("white");
     
     //call the draw function on the ball
-    //ballObject.draw(100, 100);
+    ballObject.drawBounce();
     
     //vars to control the animation below
     var xV = ballObject.speed;
@@ -61,13 +61,13 @@ function main(){
         //the += just means increment by whatever follows
         
         //check to see if the ball hits the roof or the floor
-        if(ballObject.posY <= 12 || ballObject.posY >= 338){
+        if(ballObject.posY <= 14 || ballObject.posY >= 386){
             //we will want to reverse the direction of movement in the y axis
             yV = yV * -1;
         }
         
         //now check to see if the ball hits the sides
-        if(ballObject.posX <=12 || ballObject.posX >= 338){
+        if(ballObject.posX <=14 || ballObject.posX >= 386){
             //if so then reverse the x movement
             xV = xV * -1;
         }
@@ -79,7 +79,7 @@ function main(){
         c.fillRect(0, 0, 400, 400);
         
         //now we call the drawbounce function on the ball
-        //ballObject.drawBounce();
+        ballObject.drawBounce();
         
         for(i = 0; i < particleCount; i++){
             particles[i].draw();

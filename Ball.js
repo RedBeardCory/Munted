@@ -7,7 +7,7 @@ function Ball(colour) {
     //all the "this.blah" things are specific properties of the object
     //give it a way to store it's position
     this.posX = 200;
-    this.posY = 0;
+    this.posY = 15;
     
     //specify the size of the ball
     this.radius = 10;
