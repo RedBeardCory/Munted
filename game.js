@@ -47,12 +47,13 @@ function main(){
         
         //check to see if the ball hits the roof or the floor
         if(ballObject.posY <= 0 || ballObject.posY >= 400){
+        if(ballObject.posY <= 12 || ballObject.posY >= 388){
             //we will want to reverse the direction of movement in the y axis
             yV = yV * -1;
         }
         
         //now check to see if the ball hits the sides
-        if(ballObject.posX <=0 || ballObject.posX >= 400){
+        if(ballObject.posX <= 12 || ballObject.posX >= 388){
             //if so then reverse the x movement
             xV = xV * -1;
         }
@@ -116,7 +117,7 @@ function Ball(colour) {
     //all the "this.blah" things are specific properties of the object
     //give it a way to store it's position
     this.posX = 200;
-    this.posY = 0;
+    this.posY = 12;
     
     //specify the size of the ball
     this.radius = 10;
