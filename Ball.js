@@ -7,7 +7,7 @@ function Ball(colour) {
     //all the "this.blah" things are specific properties of the object
     //give it a way to store it's position
     this.posX = 200;
-    this.posY = 15;
+    this.posY = 11;
     
     //specify the size of the ball
     this.radius = 10;
@@ -30,7 +30,7 @@ function Ball(colour) {
         c.beginPath();
         
         //this is the line that is drawn invisibly
-        c.arc(this.posX, this.posY, 20, 0, Math.PI* 2, false);
+        c.arc(this.posX, this.posY, 10, 0, Math.PI* 2, false);
         
         //then specify the colour of the fill
         c.fillStyle = this.colour;
@@ -55,5 +55,5 @@ function Ball(colour) {
     
 }
 
-
+var 
 
