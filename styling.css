@@ -17,6 +17,20 @@ h1 {
     color: ghostwhite;
 }
 
+/* put the overlay canvas on top of the other one */
+.canvasy {
+    position: relative;
+    height: 400px;
+    width: 400px;
+    
+}
+
+.canvasy canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 button {
     background-color: darkseagreen;
     border: none;
