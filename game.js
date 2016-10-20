@@ -33,7 +33,22 @@ function main(){
     var yV = ballObject.speed;
     //must put these outside of the interval loop so that they don't reset every time
     
-    //this is responsible for making the ball move around the canvas
+    //testing the particles
+    var particle = new Particle(200, 200, "orange");
+    
+    //limit the number of particles
+    var particleCount = 10;
+    
+    var particles = new Array(particleCount);
+    
+    //make the particles
+    for(i = 0; i < particleCount; i++){
+        particles[i] = new Particle(200, 200, "white");
+        particles[i].id = i;
+    }
+    
+    //this is responsible for making everything move around the canvas
+    //it's basically the frames in a loop and the draw() functions of each object is done inside it
     setInterval(function(){
         
         //to move the ball around we want to just change the x and y values over time
@@ -57,8 +72,18 @@ function main(){
             xV = xV * -1;
         }
         
+        //this is done by filling in the whole screen with black, but it is not solid, its slightly see through
+        c.fillStyle = "rgba(0, 0, 0, 0.2)";
+        
+        //now draw that over the top of everything
+        c.fillRect(0, 0, 400, 400);
+        
         //now we call the drawbounce function on the ball
-        ballObject.drawBounce();
+        //ballObject.drawBounce();
+        
+        for(i = 0; i < particleCount; i++){
+            particles[i].draw();
+        }
         
     }, 15);
 
@@ -86,83 +111,5 @@ function main(){
     */
 }
 
-//colours in the canvas with coloured blocks
-function blocks(){
-    
-    //pick a random colour
-    var a = Math.floor((Math.random() * 256) + 1);
-    var b = Math.floor((Math.random() * 256) + 1);
-    var c = Math.floor((Math.random() * 256) + 1);
-    
-    //make the colour string
-    var colour = "rgba(" + a + ", " + b + ", " + c + ", " + 1 + ")";
-    
-    //gets the random x and y position
-    var x = Math.floor((Math.random() * 400) + 1);
-    var y = Math.floor((Math.random() * 400) + 1);
-    
-    //set the colour
-    this.c.fillStyle = colour;
-    
-    //c.fillStyle = "rgba(0, 256, 0, 1)";
-    //this.c.fillStyle = "white";
-    this.c.fillRect(x, y, 10, 10);
-}
 
-//creating a ball object
-//can specify colour in the parameters
-function Ball(colour) {
-    
-    //all the "this.blah" things are specific properties of the object
-    //give it a way to store it's position
-    this.posX = 200;
-    this.posY = 0;
-    
-    //specify the size of the ball
-    this.radius = 10;
-    
-    //give it a speed
-    this.speed = 2;
-    
-    //set the colour given in the parameters
-    this.colour = colour;
-    
-    
-    //defining a function that is specific to the ball object
-    this.draw = function draw(x, y) {
-        
-        //setting the x and y values of the ball through the parameters of the function draw
-        this.posX = x;
-        this.posY = y;
-        
-        //begin path means you start drawing an invisible line
-        c.beginPath();
-        
-        //this is the line that is drawn invisibly
-        c.arc(this.posX, this.posY, 20, 0, Math.PI* 2, false);
-        
-        //then specify the colour of the fill
-        c.fillStyle = this.colour;
-        
-        //and finally colour in the stroked line
-        c.fill();
-        
-    }
-    
-    //make the ball bounce around the box
-    this.drawBounce = function drawBounce() {
-        
-        //add bluring of the ball as it moves
-        //this is done by filling in the whole screen with black, but it is not solid, its slightly see through
-        c.fillStyle = "rgba(0, 0, 0, 0.2)";
-        
-        //now draw that over the top of everything
-        c.fillRect(0, 0, 400, 400);
-        
-        //now we draw the next position of the ball on top of everything 
-        //to save on code i'm just going to call the draw function i've already written
-        this.draw(this.posX, this.posY);
-        
-    }
-    
-}
+

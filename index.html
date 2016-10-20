@@ -1,17 +1,35 @@
 <!DOCTYPE html>
+<!-- this first comment tells the browser to treat this page as html -->
+
 <html>
+    <!-- the head tag has things to do with the info about the page and also where everything is imported -->
     <head>
+        
         <!-- sets the title of the tab -->
         <title>Munted</title>
+        
         <!-- styles the page -->
         <link rel="stylesheet" href="styling.css">
-        <!-- all the code is in these for the game -->
-        <!-- make one for every feature e.g enemy, player... -->
-        <!-- game.js is the heart of the program -->
+        
+        <!-- all the javascript code for the game is in these *.js files -->
+        <!-- we will make one for every feature e.g enemy, player... -->
+        
+        <!-- game.js is the heart of the program, in it is the main function which runs everything -->
         <script src="game.js"></script>
+        
+        <!-- holds all particle functions and stuff -->
+        <script src="Particle.js"></script>
+        
+        <!-- has all code related to the ball -->
+        <script src="Ball.js"></script>
+        
+        <!-- just a cool function to draw random squares everywhere -->
+        <script src="Blocks.js"></script>
         
         <!-- import jquery for later use -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" ></script>
+        
+        
     </head>
     <body onload="initCanvas();">
         
