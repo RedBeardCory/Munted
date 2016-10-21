@@ -14,9 +14,44 @@ function initCanvas() {
     c.fillRect(0, 0, 400, 400);
 }
 
+function ObjPlatform(){
+    var platform = new Platform("blue");
+    var i = Platform.posx;
+    
+   /* 
+   $("body").keydown(function(event) {
+        if(event.which == 39){
+            //Right Movement
+            i += Platform.speed;
+        }
+        
+        if(event.which == 37){
+            i -= Platform;
+        }
+    });  
+    */
+    
+    setInterval(function(){
+        Platform.draw(i); 
+        
+        /*
+         $("body").keydown(function(event) {
+        if(event.which == 39){
+            //Right Movement
+            i += Platform.speed;
+        }
+        
+        if(event.which == 37){
+            i -= Platform;
+        }
+            
+    });
+    */
+        
+    }
+}
+
 function main(){
-    
-    
     
     //creates a new block on a random position between 1 and 400px every 10 ms
     //setInterval(blocks, 10);
@@ -42,7 +77,7 @@ function main(){
     var particles = new Array(particleCount);
     
     //make the particles
-    for(i = 0; i < particleCount; i++){
+    for(i = 0; i < particleCount; i++) {
         particles[i] = new Particle(200, 200, "white");
         particles[i].id = i;
     }
@@ -86,29 +121,6 @@ function main(){
         }
         
     }, 15);
-
-    
-    /* demo of the keydown function
-    $("body").keydown(function(event) {
-        if(event.which == 38){
-            alert("pressed up, increase up velocity");
-        }
-        
-        if(event.which == 39){
-            alert("pressed right, increase right velocity");
-        }
-        
-        if(event.which == 40){
-            alert("pressed down, increase down velocity");
-        }
-        
-        if(event.which == 37){
-            alert("pressed left, increase left velocity");
-        }
-        
-    });
-    
-    */
 }
 
 
