@@ -14,6 +14,6 @@ function Platform(colour) {
         c.fillStyle = colour;
     
         //fillRect(start x, start y, size width, size height)
-        c.fillRect(this.posx, this.posy, this.width, this.height)    
+        c.fillRect(this.posx, this.posy, this.width, this.height);   
     } 
 }
