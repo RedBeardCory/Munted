@@ -18,7 +18,6 @@ function ObjPlatform(){
     var platform = new Platform("blue");
     var i = Platform.posx;
     
-   /* 
    $("body").keydown(function(event) {
         if(event.which == 39){
             //Right Movement
@@ -26,35 +25,16 @@ function ObjPlatform(){
         }
         
         if(event.which == 37){
-            i -= Platform;
+            i -= Platform.speed;
         }
     });  
-    */
     
     setInterval(function(){
-        Platform.draw(i); 
-        
-        /*
-         $("body").keydown(function(event) {
-        if(event.which == 39){
-            //Right Movement
-            i += Platform.speed;
-        }
-        
-        if(event.which == 37){
-            i -= Platform;
-        }
-            
-    });
-    */
-        
-    }
+        Platform.draw(i);     
+    }, 15);
 }
 
 function main(){
-    
-    //creates a new block on a random position between 1 and 400px every 10 ms
-    //setInterval(blocks, 10);
     
     //create a ball that bounces around the canvas
     //first, create an object of type ball
