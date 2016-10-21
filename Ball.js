@@ -54,6 +54,5 @@ function Ball(colour) {
     }
     
 }
-
-var 
+ 
 

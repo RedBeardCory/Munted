@@ -1,14 +1,19 @@
 function Platform(colour) {
     
     //Size of the Platform
-    this.width = 30;
-    this.height = 5;
+    this.width = 60;
+    this.height = 10;
+    this.speed = 2;
+    this.posx = 20;
+    this.posy = 350;
     
-    //Colour of the Platform
-    c.fillStyle = "blue";
+    this.draw = function draw(x){
+        this.posx += x;
+        
+        //Colour of the Platform
+        c.fillStyle = colour;
     
-    //fillRect(start x, start y, size width, size height)
-    c.fillRect(20, 300, this.width, this.height);
-    
-    //This is Just here so i can Commit this stupid stuff
+        //fillRect(start x, start y, size width, size height)
+        c.fillRect(this.posx, this.posy, this.width, this.height)    
+    } 
 }
